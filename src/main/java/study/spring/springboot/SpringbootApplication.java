@@ -4,6 +4,9 @@ import org.springframework.boot.web.embedded.tomcat.TomcatServletWebServerFactor
 import org.springframework.boot.web.server.WebServer;
 import org.springframework.boot.web.servlet.ServletContextInitializer;
 import org.springframework.boot.web.servlet.server.ServletWebServerFactory;
+import org.springframework.http.HttpHeaders;
+import org.springframework.http.HttpStatus;
+import org.springframework.http.MediaType;
 
 import javax.servlet.ServletContext;
 import javax.servlet.ServletException;
@@ -20,12 +23,14 @@ public class SpringbootApplication {
             servletContext.addServlet("hello", new HttpServlet() {
                 @Override
                 protected void service(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
+                    String name = req.getParameter("name");
+
                     //상태코드
-                    resp.setStatus(200);
+                    resp.setStatus(HttpStatus.OK.value());
                     //해더
-                    resp.setHeader("Content-Type", "text/plain");
+                    resp.setHeader(HttpHeaders.CONTENT_TYPE, MediaType.TEXT_PLAIN_VALUE);
                     //바디
-                    resp.getWriter().println("Hello Servlet");
+                    resp.getWriter().println("Hello " + name);
 
                 }
             }).addMapping("/hello");
