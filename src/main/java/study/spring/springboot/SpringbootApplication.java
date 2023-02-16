@@ -20,9 +20,10 @@ import java.io.IOException;
 public class SpringbootApplication {
 
     public static void main(String[] args) {
-        //스프링 컨테이너
+        //스프링 컨테이너 빈 등록
         GenericApplicationContext applicationContext = new GenericApplicationContext();
         applicationContext.registerBean(HelloController.class);
+        applicationContext.registerBean(SimpleHelloService.class);
         applicationContext.refresh();
 
         ServletWebServerFactory serverFactory = new TomcatServletWebServerFactory();

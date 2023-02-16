@@ -35,4 +35,5 @@
             - SimpleHelloService 의 변경에 따라 HelloController 는 영향을 받는다.
           - HelloController 는 HelloService interface 를 두고 SimpleHelloService 와 ComplexHelloService 구현체를 따로 만든다.
           - 외부에서 HelloController 가 사용할 수 있게 Assembler(조립)을 한다.
-          - 스프링 컨테이너가 빈으로 등록하고 주입을 해준다
+          - 스프링 컨테이너가 빈으로 등록하고 주입을 해준다.
+    4. 의존 오브젝트 DI 적용
