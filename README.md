@@ -29,3 +29,10 @@
         - 스프링 컨테이너는 하나의 오브젝트만 만들고 이것을 계속 사용한다.
         - 이것을 싱글톤이라고 한다.
         - 역할에 따라서 기능을 계속 만든다.
+    3. DispatcherServlet 으로 전환
+        - Dependency Injection(Spring IoC/DI container)
+          - HelloController 는 SimpleHelloService 에 의존하고 있다.
+            - SimpleHelloService 의 변경에 따라 HelloController 는 영향을 받는다.
+          - HelloController 는 HelloService interface 를 두고 SimpleHelloService 와 ComplexHelloService 구현체를 따로 만든다.
+          - 외부에서 HelloController 가 사용할 수 있게 Assembler(조립)을 한다.
+          - 스프링 컨테이너가 빈으로 등록하고 주입을 해준다
