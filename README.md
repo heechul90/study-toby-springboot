@@ -33,7 +33,7 @@
         - HelloController 는 SimpleHelloService 에 의존하고 있다.
           - SimpleHelloService 의 변경에 따라 HelloController 는 영향을 받는다.
         - HelloController 는 HelloService interface 를 두고 SimpleHelloService 와 ComplexHelloService 구현체를 따로 만든다.
-        - 외부에서 HelloController 가 사용할 수 있게 Assembler(조립)을 한다.
+        - 외부에서 HelloCo용ntroller 가 사용할 수 있게 Assembler(조립)을 한다.
         - 스프링 컨테이너가 빈으로 등록하고 주입을 해준다.
     4. 의존 오브젝트 DI 적용
     5. DispatcherServlet 으로 전환 
@@ -41,3 +41,4 @@
     7. 스프링 컨테이너로 통합
     8. 자바코드 구성 정보 사용
         - 팩토리 메소드 사용해서 빈을 등록한다.
+    9. @Component 스캔
