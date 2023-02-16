@@ -9,6 +9,8 @@ import org.springframework.http.HttpHeaders;
 import org.springframework.http.HttpMethod;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.MediaType;
+import org.springframework.web.context.support.GenericWebApplicationContext;
+import org.springframework.web.servlet.DispatcherServlet;
 
 import javax.servlet.ServletContext;
 import javax.servlet.ServletException;
@@ -21,35 +23,15 @@ public class SpringbootApplication {
 
     public static void main(String[] args) {
         //스프링 컨테이너 빈 등록
-        GenericApplicationContext applicationContext = new GenericApplicationContext();
+        GenericWebApplicationContext applicationContext = new GenericWebApplicationContext();
         applicationContext.registerBean(HelloController.class);
         applicationContext.registerBean(SimpleHelloService.class);
         applicationContext.refresh();
 
         ServletWebServerFactory serverFactory = new TomcatServletWebServerFactory();
         WebServer webServer = serverFactory.getWebServer(servletContext -> {
-            servletContext.addServlet("hello", new HttpServlet() {
-                @Override
-                protected void service(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
-                    //인증, 보안, 다국어, 공통 기능 등
-                    if (req.getRequestURI().equals("/hello") && req.getMethod().equals(HttpMethod.GET.name())) {
-                        String name = req.getParameter("name");
+            servletContext.addServlet("dispatcherServlet", new DispatcherServlet(applicationContext) {
 
-                        HelloController helloController = applicationContext.getBean(HelloController.class);
-                        String ret = helloController.hello(name);
-
-                        //상태코드
-                        resp.setStatus(HttpStatus.OK.value());
-                        //해더
-                        resp.setContentType(MediaType.TEXT_PLAIN_VALUE);
-                        //바디
-                        resp.getWriter().println(ret);
-                    } else if (req.getRequestURI().equals("/user")) {
-                        //
-                    } else {
-                        resp.setStatus(HttpStatus.NOT_FOUND.value());
-                    }
-                }
             }).addMapping("/*");
         });
         webServer.start();
