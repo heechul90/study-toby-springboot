@@ -75,3 +75,4 @@
           - TomcatServletWebServerFactory
           - DispatcherServlet
     4. 인프라 빈 구성 정보의 분리
+    5. 동적인 자동 구성 정보 등록
