@@ -1,6 +1,6 @@
-package study.spring.springboot.core;
+package study.spring.config;
 
-import org.springframework.stereotype.Component;
+import org.springframework.context.annotation.Import;
 
 import java.lang.annotation.ElementType;
 import java.lang.annotation.Retention;
@@ -9,6 +9,6 @@ import java.lang.annotation.Target;
 
 @Retention(RetentionPolicy.RUNTIME)
 @Target(ElementType.TYPE)
-@Component
-public @interface MyComponent {
+@Import(MyAutoConfigImportSelector.class)
+public @interface EnableMyAutoConfiguration {
 }

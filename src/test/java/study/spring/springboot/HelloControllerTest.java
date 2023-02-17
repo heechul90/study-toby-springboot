@@ -1,7 +1,7 @@
-package study.spring.springboot.core;
+package study.spring.springboot;
 
 import org.junit.jupiter.api.Test;
-import study.spring.springboot.core.HelloController;
+import study.spring.springboot.HelloController;
 
 import static org.assertj.core.api.Assertions.*;
 

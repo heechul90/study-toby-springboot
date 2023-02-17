@@ -1,4 +1,4 @@
-package study.spring.springboot.core;
+package study.spring.springboot;
 
 public interface HelloService {
     String sayHello(String name);
