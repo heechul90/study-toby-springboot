@@ -1,6 +1,7 @@
-package study.spring.springboot;
+package study.spring.springboot.core;
 
 import org.junit.jupiter.api.Test;
+import study.spring.springboot.core.SimpleHelloService;
 
 import static org.assertj.core.api.Assertions.assertThat;
 
@@ -16,5 +17,14 @@ class HelloServiceTest {
 
         //then
         assertThat(response).isEqualTo("Hello Spring");
+    }
+
+    @Test
+    void helloDecorator() {
+        HelloDecorator decorator = new HelloDecorator(name -> name);
+
+        String response = decorator.sayHello("Spring");
+
+        assertThat(response).isEqualTo("*Spring*");
     }
 }

@@ -1,4 +1,4 @@
-package study.spring.springboot;
+package study.spring.springboot.core;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.web.client.TestRestTemplate;
@@ -26,7 +26,7 @@ class HelloApiTest {
         assertThat(response.getHeaders().getFirst(HttpHeaders.CONTENT_TYPE)).startsWith(MediaType.TEXT_PLAIN_VALUE);
 
         //body Hello spring
-        assertThat(response.getBody()).isEqualTo("Hello Spring");
+        assertThat(response.getBody()).isEqualTo("*Hello Spring*");
     }
 
     @Test

@@ -33,7 +33,7 @@
         - HelloController 는 SimpleHelloService 에 의존하고 있다.
           - SimpleHelloService 의 변경에 따라 HelloController 는 영향을 받는다.
         - HelloController 는 HelloService interface 를 두고 SimpleHelloService 와 ComplexHelloService 구현체를 따로 만든다.
-        - 외부에서 HelloCo용ntroller 가 사용할 수 있게 Assembler(조립)을 한다.
+        - 외부에서 HelloController 가 사용할 수 있게 Assembler(조립)을 한다.
         - 스프링 컨테이너가 빈으로 등록하고 주입을 해준다.
     4. 의존 오브젝트 DI 적용
     5. DispatcherServlet 으로 전환 
@@ -44,6 +44,10 @@
     9. @Component 스캔
     10. Bean 의 생명주기 메소드
     11. SpringBootApplication
-5. DI와 테스트, 디자인 패턴
+5. DI와 테스트, 디자인 패턴트
     1. 테스트 코드를 이용한 테스트
     2. DI 와 단위 테스트 
+    3. DI 를 이용한 Decorator, Proxy 패턴
+        - HelloController 는 추상화된 인터페이스 HelloService 를 의존한다.
+          - HelloService 를 수정하지 않고 구현체를 여러개 만들어 변경 가능하다
+          - 변경 가능하기 위해서는 의존주입(DI)이 필요하다
