@@ -1,4 +1,4 @@
-package study.spring.springboot.core;
+package study.spring.springboot.annotation;
 
 import org.springframework.stereotype.Component;
 
