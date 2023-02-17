@@ -74,3 +74,4 @@
           - 이것은 스프링 컨테이너의 기능이다
           - TomcatServletWebServerFactory
           - DispatcherServlet
+    4. 인프라 빈 구성 정보의 분리
