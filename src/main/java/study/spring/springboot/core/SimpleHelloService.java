@@ -1,4 +1,4 @@
-package study.spring.springboot;
+package study.spring.springboot.core;
 
 import org.springframework.stereotype.Service;
 
