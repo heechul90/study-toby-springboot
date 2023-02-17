@@ -63,3 +63,14 @@
         - 합성 애노테이션
           - 반복적으로 애노테이션이 많이 붙는다면 합성 애노테이션을 붙혀서 코드를 좀 더 깔끔하게 할 수 있다.
     2. 합성 애노테이션의 적용
+    3. 빈 오브젝트의 역할과 구분
+        - 애플리케이션 빈(사용자 구성정보 = ComponentScan)
+          - 사용자가 만들어서 빈으로 등록해서 사용함
+          - HelloController
+          - HelloDecorator
+          - SimpleHelloService
+        - 컨테이너 인프라스트럭처 빈(자동 구성정보 = AutoConfiguration)
+          - 컨테이너가 스스로 빈으로 등록해서 사용함
+          - 이것은 스프링 컨테이너의 기능이다
+          - TomcatServletWebServerFactory
+          - DispatcherServlet
