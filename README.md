@@ -44,3 +44,5 @@
     9. @Component 스캔
     10. Bean 의 생명주기 메소드
     11. SpringBootApplication
+5. DI와 테스트, 디자인 패턴
+    1. 테스트 코드를 이용한 테스트
