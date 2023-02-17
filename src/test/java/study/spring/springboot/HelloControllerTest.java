@@ -2,32 +2,28 @@ package study.spring.springboot;
 
 import org.assertj.core.api.Assertions;
 import org.junit.jupiter.api.Test;
-import org.springframework.boot.test.web.client.TestRestTemplate;
-import org.springframework.http.HttpHeaders;
-import org.springframework.http.HttpStatus;
-import org.springframework.http.MediaType;
-import org.springframework.http.ResponseEntity;
 
 import static org.assertj.core.api.Assertions.*;
-import static org.junit.jupiter.api.Assertions.*;
 
-class HelloControllerTest {
+public class HelloControllerTest {
 
     @Test
-    void hello() {
-        // http://localhost:8080/hello?name?spring
-        TestRestTemplate restTemplate = new TestRestTemplate();
+    void helloController() {
+        HelloController helloController = new HelloController(name -> name);
 
-        ResponseEntity<String> response =
-                restTemplate.getForEntity("http://localhost:8080/hello?name={name}", String.class, "Spring");
+        String response = helloController.hello("Spring");
 
-        //status 200
-        assertThat(response.getStatusCode()).isEqualTo(HttpStatus.OK);
+        assertThat(response).isEqualTo("Spring");
+    }
 
-        //header(content-type) text/plain
-        assertThat(response.getHeaders().getFirst(HttpHeaders.CONTENT_TYPE)).startsWith(MediaType.TEXT_PLAIN_VALUE);
+    @Test
+    void failsHelloController() {
+        HelloController helloController = new HelloController(name -> name);
 
-        //body Hello spring
-        assertThat(response.getBody()).isEqualTo("Hello Spring");
+        assertThatThrownBy(() -> helloController.hello(null))
+                .isInstanceOf(IllegalArgumentException.class);
+
+        assertThatThrownBy(() -> helloController.hello(""))
+                .isInstanceOf(IllegalArgumentException.class);
     }
 }
