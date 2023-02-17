@@ -1,7 +1,6 @@
-package study.spring.springboot.core;
+package study.spring.springboot;
 
 import org.junit.jupiter.api.Test;
-import study.spring.springboot.core.SimpleHelloService;
 
 import java.lang.annotation.ElementType;
 import java.lang.annotation.Retention;

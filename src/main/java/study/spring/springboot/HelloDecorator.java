@@ -1,4 +1,4 @@
-package study.spring.springboot.core;
+package study.spring.springboot;
 
 import org.springframework.context.annotation.Primary;
 import org.springframework.stereotype.Service;

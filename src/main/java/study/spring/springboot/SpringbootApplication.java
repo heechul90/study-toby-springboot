@@ -1,7 +1,7 @@
 package study.spring.springboot;
 
 import org.springframework.boot.SpringApplication;
-import study.spring.springboot.annotation.MySpringBootApplication;
+import study.spring.config.MySpringBootApplication;
 
 @MySpringBootApplication
 public class SpringbootApplication {

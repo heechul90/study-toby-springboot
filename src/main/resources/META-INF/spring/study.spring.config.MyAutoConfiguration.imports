@@ -1,0 +1,2 @@
+study.spring.config.autoconfig.DispatcherServletConfig
+study.spring.config.autoconfig.TomcatWebServerConfig

@@ -1,4 +1,4 @@
-package study.spring.springboot.core;
+package study.spring.springboot;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.web.client.TestRestTemplate;
