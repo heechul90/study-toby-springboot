@@ -4,8 +4,26 @@
 2. 스프링 부트 시작하기
 3. 독립 실행형 서블릿 애플리케이션
     1. Containerless 개발 준비
+        <details>
+        <summary>Container</summary>
+        <div>
+            <img src="images/img05.png">
+        </div>
+        </details>
     2. 서블릿 컨테이너 띄우기
+        <details>
+        <summary>Servlet Container</summary>
+        <div>
+            <img src="images/img06.png">
+        </div>
+        </details>
     3. 서블릿 등록
+        <details>
+        <summary>Servlet Container Mapping</summary>
+        <div>
+            <img src="images/img07.png">
+        </div>
+        </details>
         - 웹 클라이언트가 서블릿 컨테이너에게 요청을 해서 해당 작업을 서블릿에게 알려주는것을 매핑(Mapping)이라고 한다.
         - Request
           - Request Line : Method, Path, HTTP Version
@@ -17,19 +35,39 @@
           - Message Body
     4. 서블릿 요청 처리
     5. 프론트 컨트롤러
+        <details>
+        <summary>Front Controller</summary>
+        <div>
+            <img src="images/img08.png">
+        </div>
+        </details>
         - 모든 서블릿에 공통적인 코드를 처리하는 부분
           - 인증/보안, 다국어 등등 공통적인 사항을 처리한다.
     6. 프론트 컨트롤러로 전환
     7. Hello 컨트롤러 매핑과 바인딩 
 4. 독립 실행형 스프링 애플리케이션
     1. 스프링 컨테이너 사용
+        <details>
+        <summary>Spring Controller</summary>
+        <div>
+            <img src="images/img09.png">
+        </div>
+        </details>
         - 스프링 컨테이너는 Your Business Objects(POJOs)와 Configuration Metadata 가 필요하다
         - 스프링 컨테이너가 두 가지를 조합해서 내부의 빈을 구성해서 서블릿 애플리케이션을 만든다.용
     2. 의존 오브젝트 추가
+        <details>
+        <summary>Spring Controller</summary>
+        <div><img src="images/img10.png"></div>
+        </details>
         - 스프링 컨테이너는 하나의 오브젝트만 만들고 이것을 계속 사용한다.
         - 이것을 싱글톤이라고 한다.
         - 역할에 따라서 기능을 계속 만든다.
     3. Dependency Injection
+        <details>
+        <summary>Spring Container (Assembler)</summary>
+        <div><img src="images/img11.png"></div>
+        </details>
         - HelloController 는 SimpleHelloService 에 의존하고 있다.
           - SimpleHelloService 의 변경에 따라 HelloController 는 영향을 받는다.
         - HelloController 는 HelloService interface 를 두고 SimpleHelloService 와 ComplexHelloService 구현체를 따로 만든다.
@@ -48,11 +86,19 @@
     1. 테스트 코드를 이용한 테스트
     2. DI 와 단위 테스트 
     3. DI 를 이용한 Decorator, Proxy 패턴
+        <details>
+        <summary>Spring Container (Assembler)</summary>
+        <div><img src="images/img12.png"></div>
+        </details>
         - HelloController 는 추상화된 인터페이스 HelloService 를 의존한다.
           - HelloService 를 수정하지 않고 구현체를 여러개 만들어 변경 가능하다
           - 변경 가능하기 위해서는 의존주입(DI)이 필요하다
 6. 자동 구성 기반 애플리케이션
     1. 메타 애노테이션과 합성 애노테이션
+        <details>
+        <summary>메타 애노테이션 구성도</summary>
+        <div><img src="images/img13.png"></div>
+        </details>
         - 메타 애노테이션
           - 메타 애노테이션을 사용하면 기능적인면에서 차이는 없다
           - 다른 이름을 부여하면 그 클래스의 추가적인 정보를 얻을 수 있다.
@@ -75,7 +121,15 @@
           - TomcatServletWebServerFactory
           - DispatcherServlet
     4. 인프라 빈 구성 정보의 분리
+        <details>
+        <summary>인프라 빈 구성도</summary>
+        <div><img src="images/img13.png"></div>
+        </details>
     5. 동적인 자동 구성 정보 등록
+        <details>
+        <summary>동적인 자동 구성도</summary>
+        <div><img src="images/img13.png"></div>
+        </details>
     6. 자동 구성 정보 파일 분리
     7. 자동 구성 애노테이션 적용
         <details>
