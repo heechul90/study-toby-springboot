@@ -81,3 +81,12 @@
         - 구성도
         ![image01.png](image01.png)
     8. @Configuration 과 proxyBeanMethods
+        ![자동 구성 애노테이션 구성도](images/image01.png)
+7. 조건부 자동 구성
+    1. 스타터와 Jetty 서버 구성 추가
+        - MyAutoConfiguration -> AutoConfiguration
+          - org.springframework.autoconfigure.AutoConfiguration.imports 에 기본적으로 빈 구성정보를 가지고 있다.
+          - 등록된 빈을 다 사용하는것이 아니라 조건부에 따라서 빈으로 등록할지 말지 정할 수 있다.
+        - Tomcat 은 라이브러이이다
+    2. @Conditional 과 Condition
+        ![조건부 구성도](images/image02.png)
