@@ -90,3 +90,12 @@
     3. @Conditional 학습테스트 
     4. 커스텀 @Conditional
         ![커스텀 조건부 애노테이션 구성도](images/img03.png)
+    5. 자동 구성정보 대체하기
+        <details>
+        <summary>사용자 정보구성과 자동 구성정보</summary>
+        <div>
+        <img src="images/img04.png">
+        </div>
+        </details>
+        - 유조 구성정보(ComponentScan), 자동 구성정보(AutoConfiguration)
+        - 유저 구성정보에 등록된 빈이 우선적으로 등록된다.
