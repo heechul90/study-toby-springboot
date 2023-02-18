@@ -78,7 +78,7 @@
     5. 동적인 자동 구성 정보 등록
     6. 자동 구성 정보 파일 분리
     7. 자동 구성 애노테이션 적용
-        ![자동 구성 애노테이션 구성도](images/image01.png){: width="50"}
+        ![자동 구성 애노테이션 구성도](images/image01.png)
 7. 조건부 자동 구성
     1. 스타터와 Jetty 서버 구성 추가
         - MyAutoConfiguration -> AutoConfiguration
@@ -86,4 +86,4 @@
           - 등록된 빈을 다 사용하는것이 아니라 조건부에 따라서 빈으로 등록할지 말지 정할 수 있다.
         - Tomcat 은 라이브러이이다
     2. @Conditional 과 Condition
-        ![조건부 구성도](images/image02.png){: width="100" height="100"}
+        ![조건부 구성도](images/image02.png)
