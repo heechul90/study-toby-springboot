@@ -78,9 +78,7 @@
     5. 동적인 자동 구성 정보 등록
     6. 자동 구성 정보 파일 분리
     7. 자동 구성 애노테이션 적용
-        - 구성도
-          ![자동 구성 애노테이션 구성도](images/image01.png)
-    8. @Configuration 과 proxyBeanMethods
+        ![자동 구성 애노테이션 구성도](images/img01.png)
 7. 조건부 자동 구성
     1. 스타터와 Jetty 서버 구성 추가
         - MyAutoConfiguration -> AutoConfiguration
@@ -88,4 +86,43 @@
           - 등록된 빈을 다 사용하는것이 아니라 조건부에 따라서 빈으로 등록할지 말지 정할 수 있다.
         - Tomcat 은 라이브러이이다
     2. @Conditional 과 Condition
-        ![조건부 구성도](images/image02.png)
+        ![조건부 구성도](images/img02.png)
+    3. @Conditional 학습테스트 
+    4. 커스텀 @Conditional
+        ![커스텀 조건부 애노테이션 구성도](images/img03.png)
+    5. 자동 구성정보 대체하기
+        <details>
+        <summary>사용자 정보구성과 자동 구성정보 구성도</summary>
+        <div>
+        <img src="images/img04.png">
+        </div>
+        </details>
+        - 유조 구성정보(ComponentScan), 자동 구성정보(AutoConfiguration)
+        - 유저 구성정보에 등록된 빈이 우선적으로 등록된다.
+    6. 스프링 부트의 @Conditional
+        - 스프링 프레임워크의 @Profile 도 @Conditional 애노테이션이다.
+        - Class Conditions
+          - @ConditionalOnClass
+          - @ConditionalOnMissingClass
+          > 지정한 클래스의 프로젝트내 존재를 확인해서 포함 여부를 결정한다.
+        - Bean Conditions
+          - @ConditionalOnBean
+          - @ConditionalOnMissingBean
+          > 빈의 존재 여부를 기준으로 포함여부를 결정한다.</br> 
+            빈의 타입 또는 이름을 지정할 수 있다.</br>
+            지정된 빈 정보가 없으면 메소드의 리턴 타입을 기준으로 빈의 존재여부를 체크한다.
+        - Property Conditions
+          > @ConditionalOnProperty 는 스프링의 환경 프로퍼티 정보를 이용한다.</br>
+        지정된 프로퍼티가 존재하고 값이 false 가 아니면 포함 대상이 된다.</br>
+        특정 값을 가진 경우를 확인하거나 프로퍼티가 존재하지 않을 때 조건을 만족하게 할 수도 있다.
+        - Resource Conditions
+          > @ConditionalOnResource 는 지정된 리소스(파일)의 존재를 확인하는 조건이다.
+        - Web Application Conditions
+          - @ConditionalOnWebApplication
+          - @ConditionalOnNotWebApplication
+          > 웹 애플리케이션 여부를 확인한다.</br>
+            모든 스프링 부트 프로젝트가 웹 기술을 사용해야 하는 것은 아니다.
+        - SpEL Expression Conditions
+          > @ConditionalOnExpression 은 스프링 SpEL(스프링 표현식)의 처리 결과를 기준으로 판단한다.</br>
+            매우 상세한 조건 설정이 가능하다.
+            
