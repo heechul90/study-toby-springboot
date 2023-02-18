@@ -6,24 +6,19 @@
     1. Containerless 개발 준비
         <details>
         <summary>Container</summary>
-        <div>
-            <img src="images/img05.png">
-        </div>
+        <div><img src="images/img05.png"></div>
         </details>
     2. 서블릿 컨테이너 띄우기
         <details>
         <summary>Servlet Container</summary>
-        <div>
-            <img src="images/img06.png">
-        </div>
+        <div><img src="images/img06.png"></div>
         </details>
     3. 서블릿 등록
         <details>
         <summary>Servlet Container Mapping</summary>
-        <div>
-            <img src="images/img07.png">
-        </div>
-        </details>
+        <div><img src="images/img07.png">
+        </div></details>
+       
         - 웹 클라이언트가 서블릿 컨테이너에게 요청을 해서 해당 작업을 서블릿에게 알려주는것을 매핑(Mapping)이라고 한다.
         - Request
           - Request Line : Method, Path, HTTP Version
