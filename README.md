@@ -4,15 +4,9 @@
 2. 스프링 부트 시작하기
 3. 독립 실행형 서블릿 애플리케이션
     1. Containerless 개발 준비
-        <details>
-        <summary>Container</summary>
-        <div><img src="images/img05.png"></div>
-        </details>
+       ![Container](images/img05.png)
     2. 서블릿 컨테이너 띄우기
-        <details>
-        <summary>Servlet Container</summary>
-        <div><img src="images/img06.png"></div>
-        </details>
+       ![Servlet Container](images/img06.png)
     3. 서블릿 등록
         <details>
         <summary>Servlet Container Mapping</summary>
