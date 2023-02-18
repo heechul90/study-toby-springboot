@@ -79,9 +79,8 @@
     6. 자동 구성 정보 파일 분리
     7. 자동 구성 애노테이션 적용
         - 구성도
-        ![image01.png](image01.png)
+          ![자동 구성 애노테이션 구성도](images/image01.png)
     8. @Configuration 과 proxyBeanMethods
-        ![자동 구성 애노테이션 구성도](images/image01.png)
 7. 조건부 자동 구성
     1. 스타터와 Jetty 서버 구성 추가
         - MyAutoConfiguration -> AutoConfiguration
