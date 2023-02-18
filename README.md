@@ -113,8 +113,8 @@
             지정된 빈 정보가 없으면 메소드의 리턴 타입을 기준으로 빈의 존재여부를 체크한다.
         - Property Conditions
           > @ConditionalOnProperty 는 스프링의 환경 프로퍼티 정보를 이용한다.</br>
-        지정된 프로퍼티가 존재하고 값이 false 가 아니면 포함 대상이 된다.</br>
-        특정 값을 가진 경우를 확인하거나 프로퍼티가 존재하지 않을 때 조건을 만족하게 할 수도 있다.
+            지정된 프로퍼티가 존재하고 값이 false 가 아니면 포함 대상이 된다.</br>
+            특정 값을 가진 경우를 확인하거나 프로퍼티가 존재하지 않을 때 조건을 만족하게 할 수도 있다.
         - Resource Conditions
           > @ConditionalOnResource 는 지정된 리소스(파일)의 존재를 확인하는 조건이다.
         - Web Application Conditions
