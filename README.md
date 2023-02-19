@@ -194,4 +194,23 @@
         - SpEL Expression Conditions
           > @ConditionalOnExpression 은 스프링 SpEL(스프링 표현식)의 처리 결과를 기준으로 판단한다.</br>
             매우 상세한 조건 설정이 가능하다.
-            
+
+8. 외부 설정을 이용한 자동 구성
+    1. Environment 추상화와 프로퍼티
+        <details>
+        <summary>스프링의 Environment 추상화</summary>
+        <div><img src="images/img016.png"></div>
+        </details>
+       
+        - StandardEnvironment
+          - System Properties
+          - System Environment Variables
+        - StandardServletEnvironment
+          - ServletConfig Parameters
+          - ServletContext Parameters
+          - JNDI
+          - @PropertySource
+        - SpringBoot
+          - application.properties, xml, yml
+        - 프로퍼티 정보로 설정을 바꿀 수 있다.
+        - 스프링이 다양한 설정을 바꿀 수 있게 프로퍼티를 제공한다.
