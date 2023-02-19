@@ -236,3 +236,4 @@
         </details>
     
     2. DataSource 자동 구성 클래스
+    3. JdbcTemplate 과 트랜잭션 매니저 구성

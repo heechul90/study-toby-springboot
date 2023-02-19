@@ -1,6 +1,5 @@
 package study.spring.config.autoconfig;
 
-import org.springframework.stereotype.Component;
 import study.spring.config.MyConfigurationProperties;
 
 @MyConfigurationProperties(prefix = "server")
