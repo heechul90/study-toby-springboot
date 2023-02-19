@@ -1,3 +1,4 @@
+study.spring.config.autoconfig.ServerPropertiesConfig
 study.spring.config.autoconfig.PropertyPlaceholderConfig
 study.spring.config.autoconfig.DispatcherServletConfig
 study.spring.config.autoconfig.TomcatWebServerConfig
