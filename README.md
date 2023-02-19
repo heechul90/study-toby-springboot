@@ -223,3 +223,5 @@
           - 모든 요청의 path를 설정하게 된다.
             - contextPath=/app
               - /app/hello?name=spring
+    3. @Value 와 PropertySourcePlaceholderConfigurer
+       - 빈으로 등록 될 때 @Value 실행된다.
