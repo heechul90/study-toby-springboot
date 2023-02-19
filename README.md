@@ -214,3 +214,12 @@
           - application.properties, xml, yml
         - 프로퍼티 정보로 설정을 바꿀 수 있다.
         - 스프링이 다양한 설정을 바꿀 수 있게 프로퍼티를 제공한다.
+    2. 자동 구성에 Environment 프로퍼티 적용
+        - properties 우선순위
+          1. System Properties
+          2. Environment Properties
+          3. Application Properties
+        - contextPath
+          - 모든 요청의 path를 설정하게 된다.
+            - contextPath=/app
+              - /app/hello?name=spring
