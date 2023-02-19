@@ -1,9 +1,12 @@
 package study.spring.config.autoconfig;
 
+import org.springframework.stereotype.Component;
+import study.spring.config.MyConfigurationProperties;
+
+@MyConfigurationProperties(prefix = "server")
 public class ServerProperties {
 
     private String contextPath;
-
     private int port;
 
     public String getContextPath() {

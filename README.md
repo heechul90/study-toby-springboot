@@ -226,3 +226,4 @@
     3. @Value 와 PropertySourcePlaceholderConfigurer
        - 빈으로 등록 될 때 @Value 실행된다.
     4. 프로퍼티 클래스의 분리
+    5. 프로퍼티 빈의 후처리기 도입
