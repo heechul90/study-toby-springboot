@@ -1,3 +1,4 @@
+study.spring.config.autoconfig.DataSourceConfig
 study.spring.config.autoconfig.PropertyPostProcessorConfig
 study.spring.config.autoconfig.PropertyPlaceholderConfig
 study.spring.config.autoconfig.DispatcherServletConfig

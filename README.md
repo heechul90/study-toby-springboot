@@ -234,3 +234,5 @@
         <summary>자동 구설 클래스</summary>
         <div><img src="images/img017.png"></div>
         </details>
+    
+    2. DataSource 자동 구성 클래스
