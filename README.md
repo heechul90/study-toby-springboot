@@ -129,12 +129,12 @@
     4. 인프라 빈 구성 정보의 분리
         <details>
         <summary>인프라 빈 구성도</summary>
-        <div><img src="images/img13.png"></div>
+        <div><img src="images/img14.png"></div>
         </details>
     5. 동적인 자동 구성 정보 등록
         <details>
         <summary>동적인 자동 구성도</summary>
-        <div><img src="images/img13.png"></div>
+        <div><img src="images/img15.png"></div>
         </details>
     6. 자동 구성 정보 파일 분리
     7. 자동 구성 애노테이션 적용
@@ -199,7 +199,7 @@
     1. Environment 추상화와 프로퍼티
         <details>
         <summary>스프링의 Environment 추상화</summary>
-        <div><img src="images/img016.png"></div>
+        <div><img src="images/img16.png"></div>
         </details>
        
         - StandardEnvironment
@@ -232,7 +232,7 @@
     1. 자동 구성 클래스와 빈 설계
         <details>
         <summary>자동 구설 클래스</summary>
-        <div><img src="images/img017.png"></div>
+        <div><img src="images/img17.png"></div>
         </details>
     
     2. DataSource 자동 구성 클래스
@@ -248,8 +248,8 @@
         - 자동구성 코드는 branch study/9.spring_JD환BC_auto_configuration 로 이동
     2. 스프링 부트 자세히 살펴보기
         <details>
-        <summary>자동 구설 클래스</summary>
-        <div><img src="images/img018.png"></div>
+        <summary>스프링 부트</summary>
+        <div><img src="images/img18.png"></div>
         </details>
        
         - 자동 구성
@@ -277,3 +277,10 @@
             - @Configuration
         - 자동 구성 인프라스트럭처 빈 and 유저 구성 애플리케이션 빈
           - 애플리케이션 구성 정보
+    3. 자동 구성 분석 방법
+        <details>
+        <summary>자동 구성 분석 방법</summary>
+        <div><img src="images/img19.png"></div>
+        </details>
+       
+        - 자동 구성 후보 목록과 조건 판단 결과를 조회하려면 -Ddebug --debug 를 활용한다.
