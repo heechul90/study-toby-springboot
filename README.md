@@ -241,8 +241,39 @@
         - Test 시 @Rollback 을 true, false 로 롤백 여부를 설정 할 수 있다.
     4. Hello 리포지토리
     5. 리포지토리를 사용하는 HelloService 
-10 . 스프링 부트 자세히 살펴보기
+10. 스프링 부트 자세히 살펴보기
     1. 스프링 부트의 자동 구성과 테스트로 전환
         - 기존에 만들었던 자동 구성 삭제함
         - 삭제 후 스프링부트의 어노테이션으로 교체하고 테스트 진행
-        - 자동구성 코드는 branch study/9.spring_JDBC_auto_configuration 로 이동
+        - 자동구성 코드는 branch study/9.spring_JD환BC_auto_configuration 로 이동
+    2. 스프링 부트 자세히 살펴보기
+        <details>
+        <summary>자동 구설 클래스</summary>
+        <div><img src="images/img018.png"></div>
+        </details>
+       
+        - 자동 구성
+          - 사용기술선택
+            - 언어, 데이터베이스, 서블릿, 보안, 캐슁, 클라우드 등 선택
+          - Spring Initializr
+            - 프로젝트를 생성
+          - Springboot Starter + Dependencies
+            - 의존 추가
+          - @AutoConfiguration AutoConfiguration.imports
+            - 자동 구성 후보 로딩
+          - @Conditional 
+            - 매칭 조건 판별
+          - 디폴트 자동 구성 인프라 빈
+          - 프로퍼티 소스 application.properties
+            - 외부설정 프로퍼티 적용
+        - 사용자 구성
+          - @ComponentScan
+            - 자동 빈 등록
+          - 애플리케이션 로직 빈
+            - @Component
+          - 커스텀 인프라 빈
+            - @Configuration
+          - 추가 임프라 빈
+            - @Configuration
+        - 자동 구성 인프라스트럭처 빈 and 유저 구성 애플리케이션 빈
+          - 애플리케이션 구성 정보
