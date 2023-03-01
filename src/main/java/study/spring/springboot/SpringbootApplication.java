@@ -7,7 +7,7 @@ import org.springframework.core.env.Environment;
 import org.springframework.jdbc.core.JdbcTemplate;
 import study.spring.config.MySpringBootApplication;
 
-import javax.annotation.PostConstruct;
+import jakarta.annotation.PostConstruct;
 import java.sql.SQLException;
 
 @MySpringBootApplication
