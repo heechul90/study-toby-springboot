@@ -18,5 +18,5 @@ import java.lang.annotation.Target;
 @ContextConfiguration(classes = SpringbootApplication.class)
 @TestPropertySource("classpath:/application.properties")
 @Transactional
-public @interface SpringbootTest {
+public @interface SpringbootApiTest {
 }

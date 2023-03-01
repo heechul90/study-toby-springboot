@@ -1,14 +1,13 @@
 package study.spring.config;
 
-import org.assertj.core.api.Assertions;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.jdbc.core.JdbcTemplate;
 
-import static org.assertj.core.api.Assertions.*;
+import static org.assertj.core.api.Assertions.assertThat;
 
-@SpringbootTest
+@SpringbootApiTest
 public class JdbcTemplateTest {
 
     @Autowired
@@ -16,7 +15,7 @@ public class JdbcTemplateTest {
 
     @BeforeEach
     void init() {
-        jdbcTemplate.execute("create table if not eexists hello(name varchar(50) primary key, count int)");
+        jdbcTemplate.execute("create table if not exists hello(name varchar(50) primary key, count int)");
     }
 
     @Test

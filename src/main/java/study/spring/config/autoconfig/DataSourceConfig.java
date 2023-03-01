@@ -1,5 +1,6 @@
 package study.spring.config.autoconfig;
 
+import com.zaxxer.hikari.HikariDataSource;
 import org.springframework.boot.autoconfigure.condition.ConditionalOnMissingBean;
 import org.springframework.boot.autoconfigure.condition.ConditionalOnSingleCandidate;
 import org.springframework.context.annotation.Bean;
@@ -21,30 +22,26 @@ import java.sql.SQLException;
 @EnableTransactionManagement
 public class DataSourceConfig {
 
-//    @Bean
-//    @ConditionalMyOnClass("com.zaxxer.hikari.HikariDataSource")
-//    @ConditionalOnMissingBean
-//    DataSource hikariDataSource(MyDataSourceProperties properties) {
-//        HikariDataSource dataSource = new HikariDataSource();
-//
-//        dataSource.setDriverClassName(properties.getDriverClassName());
-//        dataSource.setJdbcUrl(properties.getUrl());
-//        dataSource.setUsername(properties.getUsername());
-//        dataSource.setPassword(properties.getPassword());
-//
-//        return dataSource;
-//    }
-
     @Bean
     @ConditionalOnMissingBean
     DataSource dataSource(MyDataSourceProperties properties) throws ClassNotFoundException {
         SimpleDriverDataSource dataSource = new SimpleDriverDataSource();
 
-        System.out.println("dataSource.getDriver() = " + dataSource.getDriver());
-        System.out.println("dataSource.getUsername() = " + dataSource.getUsername());
-
         dataSource.setDriverClass((Class<? extends Driver>) Class.forName(properties.getDriverClassName()));
         dataSource.setUrl(properties.getUrl());
+        dataSource.setUsername(properties.getUsername());
+        dataSource.setPassword(properties.getPassword());
+        return dataSource;
+    }
+
+    @Bean
+    @ConditionalMyOnClass("com.zaxxer.hikari.HikariDataSource")
+    @ConditionalOnMissingBean
+    DataSource hikariDataSource(MyDataSourceProperties properties) {
+        HikariDataSource dataSource = new HikariDataSource();
+
+        dataSource.setDriverClassName(properties.getDriverClassName());
+        dataSource.setJdbcUrl(properties.getUrl());
         dataSource.setUsername(properties.getUsername());
         dataSource.setPassword(properties.getPassword());
         return dataSource;
