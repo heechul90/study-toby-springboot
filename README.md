@@ -240,7 +240,8 @@
         - connect 하는 과정에서 오타로 인해 수정 commit 이 좀 많이 올라갔음
         - Test 시 @Rollback 을 true, false 로 롤백 여부를 설정 할 수 있다.
     4. Hello 리포지토리
-    5. 리포지토리를 사용하는 HelloService 
+    5. 리포지토리를 사용하는 HelloService
+
 10. 스프링 부트 자세히 살펴보기
     1. 스프링 부트의 자동 구성과 테스트로 전환
         - 기존에 만들었던 자동 구성 삭제함
@@ -284,3 +285,5 @@
         </details>
        
         - 자동 구성 후보 목록과 조건 판단 결과를 조회하려면 -Ddebug --debug 를 활용한다.
+
+[[다음으로]](https://github.com/heechul90/study-toby-springboot-autoconfiguration)
