@@ -240,3 +240,4 @@
         - connect 하는 과정에서 오타로 인해 수정 commit 이 좀 많이 올라갔음
         - Test 시 @Rollback 을 true, false 로 롤백 여부를 설정 할 수 있다.
     4. Hello 리포지토리
+    5. 리포지토리를 사용하는 HelloService 

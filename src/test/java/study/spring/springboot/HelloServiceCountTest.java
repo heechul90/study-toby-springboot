@@ -7,11 +7,14 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.jdbc.core.JdbcTemplate;
 import study.spring.config.SpringbootApiTest;
 
+import java.util.stream.IntStream;
+
 import static org.assertj.core.api.Assertions.*;
 
 @SpringbootApiTest
-public class HelloRepositoryTest {
+public class HelloServiceCountTest {
 
+    @Autowired HelloService helloService;
     @Autowired HelloRepository helloRepository;
     @Autowired JdbcTemplate jdbcTemplate;
 
@@ -19,20 +22,11 @@ public class HelloRepositoryTest {
     void init() {
         jdbcTemplate.execute("create table if not exists hello(name varchar(50) primary key, count int)");
     }*/
-
     @Test
-    void findHelloFailed() {
-        assertThat(helloRepository.findHello("Heechul")).isNull();
-    }
-
-    @Test
-    void increaseCount() {
-        assertThat(helloRepository.countOf("heechul")).isEqualTo(0);
-
-        helloRepository.increaseCount("heechul");
-        assertThat(helloRepository.countOf("heechul")).isEqualTo(1);
-
-        helloRepository.increaseCount("heechul");
-        assertThat(helloRepository.countOf("heechul")).isEqualTo(2);
+    void sayHelloIncreaseCount() {
+        IntStream.rangeClosed(1, 10).forEach(count -> {
+            helloService.sayHello("heechul");
+            assertThat(helloRepository.countOf("heechul")).isEqualTo(count);
+        });
     }
 }

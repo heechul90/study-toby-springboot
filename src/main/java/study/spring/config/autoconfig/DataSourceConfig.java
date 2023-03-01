@@ -22,18 +22,8 @@ import java.sql.SQLException;
 @EnableTransactionManagement
 public class DataSourceConfig {
 
-    @Bean
-    @ConditionalOnMissingBean
-    DataSource dataSource(MyDataSourceProperties properties) throws ClassNotFoundException {
-        SimpleDriverDataSource dataSource = new SimpleDriverDataSource();
-
-        dataSource.setDriverClass((Class<? extends Driver>) Class.forName(properties.getDriverClassName()));
-        dataSource.setUrl(properties.getUrl());
-        dataSource.setUsername(properties.getUsername());
-        dataSource.setPassword(properties.getPassword());
-        return dataSource;
-    }
-
+    //Hikari 메소드를 첫번째로 위치 시킨다.
+    //dataSource 메소드를 첫번째로 위치 시키면 @PostConstruct 에서 생성한 테이블이 사라진다..
     @Bean
     @ConditionalMyOnClass("com.zaxxer.hikari.HikariDataSource")
     @ConditionalOnMissingBean
@@ -42,6 +32,18 @@ public class DataSourceConfig {
 
         dataSource.setDriverClassName(properties.getDriverClassName());
         dataSource.setJdbcUrl(properties.getUrl());
+        dataSource.setUsername(properties.getUsername());
+        dataSource.setPassword(properties.getPassword());
+        return dataSource;
+    }
+
+    @Bean
+    @ConditionalOnMissingBean
+    DataSource dataSource(MyDataSourceProperties properties) throws ClassNotFoundException {
+        SimpleDriverDataSource dataSource = new SimpleDriverDataSource();
+
+        dataSource.setDriverClass((Class<? extends Driver>) Class.forName(properties.getDriverClassName()));
+        dataSource.setUrl(properties.getUrl());
         dataSource.setUsername(properties.getUsername());
         dataSource.setPassword(properties.getPassword());
         return dataSource;
