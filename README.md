@@ -7,9 +7,9 @@
 1. 스프링 부트 살펴보기
     1. 스프링 부트 소개
     2. 스프링 부트 역사
-   3. Containerless
-   4. Opinionated
-   5. 스프링 부트의 이해
+    3. Containerless
+    4. Opinionated
+    5. 스프링 부트의 이해
 
 2. 스프링 부트 시작하기
     1. 개발환경 준비
