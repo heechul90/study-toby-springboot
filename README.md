@@ -5,8 +5,29 @@
 ## 목차
 
 1. 스프링 부트 살펴보기
+    1. 스프링 부트 소개
+    2. 스프링 부트 역사
+   3. Containerless
+   4. Opinionated
+   5. 스프링 부트의 이해
 
 2. 스프링 부트 시작하기
+    1. 개발환경 준비
+    2. 프로젝트 생성 
+       - 프로젝트 생성
+         - 프로젝트 선택
+           - Project : Gradle Project
+           - Language : Java
+           - Spring Boot : 2.7.x
+         - Project Metadata
+           - Group : study.spring
+           - Artifact : springboot
+           - Package name : study.spring.springboot
+           - Packaging : Jar
+           - Java : 11
+    3. Hello 컨트롤러
+    4. Hello API 테스트
+    5. HTTP 요청과 응답
 
 3. 독립 실행형 서블릿 애플리케이션
     1. Containerless 개발 준비
