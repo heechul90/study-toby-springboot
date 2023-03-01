@@ -11,6 +11,9 @@ import study.spring.config.MyConfigurationProperties;
 
 import java.util.Map;
 
+import static org.springframework.core.annotation.AnnotationUtils.findAnnotation;
+import static org.springframework.core.annotation.AnnotationUtils.getAnnotationAttributes;
+
 @MyAutoConfiguration
 public class PropertyPostProcessorConfig {
 
@@ -20,6 +23,7 @@ public class PropertyPostProcessorConfig {
             @Override
             public Object postProcessAfterInitialization(Object bean, String beanName) throws BeansException {
                 MyConfigurationProperties annotation = AnnotationUtils.findAnnotation(bean.getClass(), MyConfigurationProperties.class);
+
                 if (annotation == null) return bean;
 
                 Map<String, Object> annotationAttributes = AnnotationUtils.getAnnotationAttributes(annotation);
@@ -28,4 +32,21 @@ public class PropertyPostProcessorConfig {
             }
         };
     }
+
+//    @Bean
+//    BeanPostProcessor propertyPostProcessor(Environment environment) {
+//        return new BeanPostProcessor() {
+//            @Override
+//            public Object postProcessAfterInitialization(Object bean, String beanName) throws BeansException {
+//                MyConfigurationProperties annotation = findAnnotation(bean.getClass(), MyConfigurationProperties.class);
+//
+//                if (annotation == null) return bean;
+//
+//                Map<String, Object> attrs = getAnnotationAttributes(annotation);
+//                String prefix = (String) attrs.get("prefix");
+//
+//                return Binder.get(environment).bindOrCreate(prefix, bean.getClass());
+//            }
+//        };
+//    }
 }

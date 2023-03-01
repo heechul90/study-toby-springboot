@@ -24,7 +24,7 @@ class HelloServiceTest {
     @Test
     void sayHello() {
         //given
-        SimpleHelloService helloService = new SimpleHelloService();
+        SimpleHelloService helloService = new SimpleHelloService(helloRepositoryStub);
 
         //when
         String response = helloService.sayHello("Spring");
@@ -32,6 +32,18 @@ class HelloServiceTest {
         //then
         assertThat(response).isEqualTo("Hello Spring");
     }
+
+    private static HelloRepository helloRepositoryStub = new HelloRepository() {
+        @Override
+        public Hello findHello(String name) {
+            return null;
+        }
+
+        @Override
+        public void increaseCount(String name) {
+
+        }
+    };
 
     @Test
     void helloDecorator() {

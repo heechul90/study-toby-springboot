@@ -227,3 +227,17 @@
        - 빈으로 등록 될 때 @Value 실행된다.
     4. 프로퍼티 클래스의 분리
     5. 프로퍼티 빈의 후처리기 도입
+
+9. Spring JDBC 자동 구성 개발
+    1. 자동 구성 클래스와 빈 설계
+        <details>
+        <summary>자동 구설 클래스</summary>
+        <div><img src="images/img017.png"></div>
+        </details>
+    
+    2. DataSource 자동 구성 클래스
+    3. JdbcTemplate 과 트랜잭션 매니저 구성
+        - connect 하는 과정에서 오타로 인해 수정 commit 이 좀 많이 올라갔음
+        - Test 시 @Rollback 을 true, false 로 롤백 여부를 설정 할 수 있다.
+    4. Hello 리포지토리
+    5. 리포지토리를 사용하는 HelloService 
