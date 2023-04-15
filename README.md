@@ -307,5 +307,10 @@
        
         - 자동 구성 후보 목록과 조건 판단 결과를 조회하려면 -Ddebug --debug 를 활용한다.
 
+11. 스프링 부트 3.0으로 예제 업그레이드 (branch = study/11.upgrade_springboo3)
+    1. 버전 업그레이드시 호환이 잘 되는지 잘 확인해야한다.
+    2. 테스트코드는 버전 업그레이드나 리팩토링시 정말 유용한다.
+    3. 패키지명이 jakarta 로 바뀌었다.
+    4. gradle/wrapper/gradle-wrapper.properties gradle 버전 확인한다.
 
 [[다음으로]](https://github.com/heechul90/study-toby-springboot-autoconfiguration)
